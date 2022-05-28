@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "overpass";
+  src: url(/Rating-component/fonts/Overpass-Regular.ttf), url(/Rating-component/fonts/Overpass-Bold.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "overpass";
+  color: #fff;
+  background-color: #121417;
+}
+
+.flip_card .flip_inner {
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+.flip_card .flip_inner .rating-card {
+  width: 500px;
+  height: 400px;
+  background-color: #252d37;
+  border-radius: 40px;
+  padding: 30px 50px;
+  margin-top: 150px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.flip_card .flip_inner .rating-card .star_img {
+  width: max-content;
+}
+.flip_card .flip_inner .rating-card .star_img img {
+  border: 1px solid #545b65;
+  padding: 11px;
+  background-color: #545b65;
+  border-radius: 40px;
+}
+.flip_card .flip_inner .rating-card .text_content .title {
+  font-weight: bold;
+}
+.flip_card .flip_inner .rating-card .text_content p {
+  color: #959eac;
+}
+.flip_card .flip_inner .rating-card .rating_num ul a {
+  text-decoration: none;
+  display: inline-block;
+  color: #959eac;
+  background-color: #545b65;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 100%;
+  padding-top: 17px;
+  margin: 0 10px;
+}
+.flip_card .flip_inner .rating-card .rating_num ul a:hover {
+  background-color: #959eac;
+  color: #fff;
+}
+.flip_card .flip_inner .rating-card .rating_num ul a li {
+  list-style-type: none;
+}
+.flip_card .flip_inner .rating-card .rating_num ul .active {
+  background-color: #fb7413;
+  color: #fff;
+}
+.flip_card .flip_inner .rating-card .rating_num ul .active:hover {
+  background-color: #fb7413;
+}
+.flip_card .flip_inner .rating-card .submit_btn button {
+  background-color: #545b65;
+  border: #fb7413;
+  padding: 12px 0;
+  opacity: 0.5;
+  cursor: unset;
+}
+.flip_card .flip_inner .rating-card .submit_btn button:focus {
+  box-shadow: unset;
+}
+.flip_card .flip_inner .rating-card .submit_btn .active_submit_btn {
+  background-color: #fb7413;
+  border: #fb7413;
+  padding: 12px 0;
+  opacity: 1;
+  cursor: pointer;
+}
+.flip_card .flip_inner .success_rating {
+  width: 500px;
+  height: 400px;
+  background-color: #252d37;
+  border-radius: 40px;
+  padding: 30px 50px;
+  margin-top: 150px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.flip_card .flip_inner .success_rating .selected_msg p {
+  padding: 10px;
+  background-color: #545b65;
+  color: #fb7413;
+  border-radius: 50px;
+  width: max-content;
+  margin: auto;
+  height: 37px;
+}
+.flip_card .flip_inner .success_rating .thank_you h3 {
+  font-weight: bold;
+}
+.flip_card .flip_inner .success_rating .thank_you p {
+  color: #959eac;
+}
+.flip_card .flip_toggle {
+  transform: rotateY(180deg);
+}
+.flip_card .add_scale_p {
+  transition: all 0.5s;
+  animation: zoomtag 0.6s linear;
+}
+@keyframes zoomtag {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

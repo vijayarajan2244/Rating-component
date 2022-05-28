@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "overpass";
+    src: url(/Rating-component/fonts/Overpass-Regular.ttf), url(/Rating-component/fonts/Overpass-Bold.ttf);
+}
+//Color variables
+$primary:#fb7413;
+$very-dark-blue:#121417;
+$dark-blue:#252d37;
+$mid-grey:#7c8798;
+$light-grey:#959eac;
+$white:#fff;
+$star-grey:#545b65;
+
+//Card mixin
+@mixin card_layout {
+    width: 500px;
+    height: 400px;
+    background-color: $dark-blue;
+    border-radius: 40px;
+    padding: 30px 50px;
+    margin-top: 150px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "overpass";
+    color: $white;
+    background-color: $very-dark-blue;
+}
+.flip_card{
+    .flip_inner{
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        width: 500px;
+        height: 400px;
+        margin: auto;
+        .rating-card{
+            @include card_layout();
+            position: absolute;
+            backface-visibility: hidden;
+            .star_img{
+                width: max-content;
+                img{
+                    border: 1px solid $star-grey;
+                    padding: 11px;
+                    background-color: $star-grey;
+                    border-radius: 40px;
+                }
+            }
+            .text_content{
+                .title{
+                    font-weight: bold;
+                }
+                p{
+                    color: $light-grey;
+                }
+            }
+            .rating_num{
+                ul{
+                    a{
+                        text-decoration: none;
+                        display: inline-block;
+                        color: $light-grey;
+                        background-color: $star-grey;
+                        width: 55px;
+                        height: 55px;
+                        text-align: center;
+                        border-radius: 100%;
+                        padding-top: 17px;
+                        margin: 0 10px;
+                        &:hover{
+                            background-color: $light-grey;
+                            color: $white;
+                        }
+                        li{
+                            list-style-type: none;
+                        }
+                    }
+                    .active{
+                        background-color: $primary;
+                        color: $white;
+                        &:hover{
+                            background-color: $primary;
+                        }
+                    }
+                    
+                }
+            }
+            .submit_btn{
+                button{
+                    background-color: $star-grey;
+                    border: $primary;
+                    padding: 12px 0;
+                    opacity: 0.5;
+                    cursor: unset;
+                    &:focus{
+                        box-shadow: unset;
+                    }
+                }
+                .active_submit_btn{
+                    background-color: $primary;
+                    border: $primary;
+                    padding: 12px 0;
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+        .success_rating{
+            @include card_layout();
+            position: absolute;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            .selected_msg{
+                p{
+                    padding: 10px;
+                    background-color: $star-grey;
+                    color: $primary;
+                    border-radius: 50px;
+                    width: max-content;
+                    margin: auto;
+                    height: 37px;
+                };   
+            }
+            .thank_you{
+                h3{
+                    font-weight: bold;
+                }
+                p{
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+    .flip_toggle{
+        transform: rotateY(180deg);
+    }
+    .add_scale_p{
+        transition: all 0.5s;
+        animation: zoomtag 0.6s linear;
+    }
+    @keyframes zoomtag {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}
+
+
+
