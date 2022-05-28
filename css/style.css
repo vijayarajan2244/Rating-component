@@ -1,11 +1,11 @@
 @font-face {
   font-family: "overpass";
-  src: url(/Rating-component/fonts/Overpass-Regular.ttf), url(/Rating-component/fonts/Overpass-Bold.ttf);
+  src: url(/fonts/Overpass-Regular.ttf), url(fonts/Overpass-Bold.ttf);
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: "overpass";
+  font-family: "overpass" !important;
   color: #fff;
   background-color: #121417;
 }
@@ -43,7 +43,8 @@ body {
 .flip_card .flip_inner .rating-card .text_content p {
   color: #959eac;
 }
-.flip_card .flip_inner .rating-card .rating_num ul a {
+.flip_card .flip_inner .rating-card .rating_num ul li {
+  list-style-type: none;
   text-decoration: none;
   display: inline-block;
   color: #959eac;
@@ -54,13 +55,11 @@ body {
   border-radius: 100%;
   padding-top: 17px;
   margin: 0 10px;
+  cursor: pointer;
 }
-.flip_card .flip_inner .rating-card .rating_num ul a:hover {
+.flip_card .flip_inner .rating-card .rating_num ul li:hover {
   background-color: #959eac;
   color: #fff;
-}
-.flip_card .flip_inner .rating-card .rating_num ul a li {
-  list-style-type: none;
 }
 .flip_card .flip_inner .rating-card .rating_num ul .active {
   background-color: #fb7413;

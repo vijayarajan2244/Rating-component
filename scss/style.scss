@@ -1,6 +1,6 @@
 @font-face {
     font-family: "overpass";
-    src: url(/Rating-component/fonts/Overpass-Regular.ttf), url(/Rating-component/fonts/Overpass-Bold.ttf);
+    src: url(/fonts/Overpass-Regular.ttf), url(fonts/Overpass-Bold.ttf);
 }
 //Color variables
 $primary:#fb7413;
@@ -23,7 +23,7 @@ $star-grey:#545b65;
 body{
     margin: 0;
     padding: 0;
-    font-family: "overpass";
+    font-family: "overpass" !important;
     color: $white;
     background-color: $very-dark-blue;
 }
@@ -57,26 +57,25 @@ body{
                 }
             }
             .rating_num{
-                ul{
-                    a{
-                        text-decoration: none;
-                        display: inline-block;
-                        color: $light-grey;
-                        background-color: $star-grey;
-                        width: 55px;
-                        height: 55px;
-                        text-align: center;
-                        border-radius: 100%;
-                        padding-top: 17px;
-                        margin: 0 10px;
-                        &:hover{
-                            background-color: $light-grey;
-                            color: $white;
-                        }
+                ul{                       
                         li{
                             list-style-type: none;
+                            text-decoration: none;
+                            display: inline-block;
+                            color: $light-grey;
+                            background-color: $star-grey;
+                            width: 55px;
+                            height: 55px;
+                            text-align: center;
+                            border-radius: 100%;
+                            padding-top: 17px;
+                            margin: 0 10px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $light-grey;
+                                color: $white;
+                            }
                         }
-                    }
                     .active{
                         background-color: $primary;
                         color: $white;
