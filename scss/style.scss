@@ -19,6 +19,10 @@ $star-grey:#545b65;
     border-radius: 40px;
     padding: 30px 50px;
     margin-top: 150px;
+    @media screen and (max-width:576px) {
+        width: 350px;
+        padding: 30px 20px;
+    }
 }
 body{
     margin: 0;
@@ -35,6 +39,9 @@ body{
         width: 500px;
         height: 400px;
         margin: auto;
+        @media screen and (max-width:576px) {
+            width: 350px;
+        }
         .rating-card{
             @include card_layout();
             position: absolute;
@@ -70,6 +77,9 @@ body{
                             border-radius: 100%;
                             padding-top: 17px;
                             margin: 0 10px;
+                            @media screen and (max-width:576px) {
+                                margin: 0 1px;
+                            }
                             cursor: pointer;
                             &:hover{
                                 background-color: $light-grey;
